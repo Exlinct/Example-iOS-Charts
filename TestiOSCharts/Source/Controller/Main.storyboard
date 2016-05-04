@@ -108,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pro-wC-f0z" customClass="BarChartView" customModule="TestiOSCharts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="20" width="768" height="954"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -116,7 +116,7 @@
                         <constraints>
                             <constraint firstItem="Pro-wC-f0z" firstAttribute="top" secondItem="Rhg-zz-6zu" secondAttribute="bottom" id="BIZ-AW-DAb"/>
                             <constraint firstItem="Pro-wC-f0z" firstAttribute="leading" secondItem="drm-8n-KPE" secondAttribute="leading" id="Kif-UN-FUI"/>
-                            <constraint firstItem="bev-l8-Tgk" firstAttribute="top" secondItem="Pro-wC-f0z" secondAttribute="bottom" id="dSl-To-bEp"/>
+                            <constraint firstItem="bev-l8-Tgk" firstAttribute="top" secondItem="Pro-wC-f0z" secondAttribute="bottom" constant="50" id="dSl-To-bEp"/>
                             <constraint firstAttribute="trailing" secondItem="Pro-wC-f0z" secondAttribute="trailing" id="p8e-qI-oeZ"/>
                         </constraints>
                     </view>
@@ -126,7 +126,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEa-tD-Thr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2209" y="1006"/>
+            <point key="canvasLocation" x="2182" y="1005"/>
+        </scene>
+        <!--Number Of Patient In Out View Controller-->
+        <scene sceneID="Dcu-Jb-H3M">
+            <objects>
+                <viewController storyboardIdentifier="numberOfPatientInOut" id="2XW-zc-iQ6" customClass="NumberOfPatientInOutViewController" customModule="TestiOSCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uJN-c1-Dpf"/>
+                        <viewControllerLayoutGuide type="bottom" id="H1B-dv-gxH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hZd-20-NAx">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRI-zz-E3C" customClass="BarChartView" customModule="TestiOSCharts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="768" height="954"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H1B-dv-gxH" firstAttribute="top" secondItem="lRI-zz-E3C" secondAttribute="bottom" constant="50" id="1F1-j3-Pzk"/>
+                            <constraint firstItem="lRI-zz-E3C" firstAttribute="top" secondItem="uJN-c1-Dpf" secondAttribute="bottom" id="HLp-gw-qrP"/>
+                            <constraint firstItem="lRI-zz-E3C" firstAttribute="leading" secondItem="hZd-20-NAx" secondAttribute="leading" id="UZQ-wQ-03n"/>
+                            <constraint firstAttribute="trailing" secondItem="lRI-zz-E3C" secondAttribute="trailing" id="hr8-oh-vxM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barChartView" destination="lRI-zz-E3C" id="0iX-Th-iHt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8b-o4-3v6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1299" y="2105"/>
+        </scene>
+        <!--Number Of Patient View Controller-->
+        <scene sceneID="oVT-51-bUI">
+            <objects>
+                <viewController storyboardIdentifier="numberOfPatient" id="cGc-zy-KbV" customClass="NumberOfPatientViewController" customModule="TestiOSCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q3n-yw-n74"/>
+                        <viewControllerLayoutGuide type="bottom" id="nxf-Il-xkT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Q0-m4-dPm">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaB-T1-20E" customClass="BarChartView" customModule="TestiOSCharts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="768" height="954"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BaB-T1-20E" firstAttribute="top" secondItem="q3n-yw-n74" secondAttribute="bottom" id="5yh-x8-nf6"/>
+                            <constraint firstAttribute="trailing" secondItem="BaB-T1-20E" secondAttribute="trailing" id="Qou-qU-BKR"/>
+                            <constraint firstItem="nxf-Il-xkT" firstAttribute="top" secondItem="BaB-T1-20E" secondAttribute="bottom" constant="50" id="ZlN-OE-xAG"/>
+                            <constraint firstItem="BaB-T1-20E" firstAttribute="leading" secondItem="0Q0-m4-dPm" secondAttribute="leading" id="u1I-74-ddY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barChartView" destination="BaB-T1-20E" id="0Zy-Qm-LQa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chm-um-p0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2182" y="2105"/>
         </scene>
         <!--Doctors For Cancer View Controller-->
         <scene sceneID="MJj-uj-TL3">
@@ -141,14 +207,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSM-4S-Vvf" customClass="BubbleChartView" customModule="TestiOSCharts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="20" width="768" height="954"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vSM-4S-Vvf" firstAttribute="leading" secondItem="S7I-bL-wHr" secondAttribute="leading" id="6e9-cl-9RR"/>
-                            <constraint firstItem="JwW-Pr-JuS" firstAttribute="top" secondItem="vSM-4S-Vvf" secondAttribute="bottom" id="Lth-ES-M68"/>
+                            <constraint firstItem="JwW-Pr-JuS" firstAttribute="top" secondItem="vSM-4S-Vvf" secondAttribute="bottom" constant="50" id="Lth-ES-M68"/>
                             <constraint firstAttribute="trailing" secondItem="vSM-4S-Vvf" secondAttribute="trailing" id="Nta-hf-1ec"/>
                             <constraint firstItem="vSM-4S-Vvf" firstAttribute="top" secondItem="IZZ-qD-4CQ" secondAttribute="bottom" id="hHS-il-b4v"/>
                         </constraints>
@@ -159,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PeF-Bc-uZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3043" y="961"/>
+            <point key="canvasLocation" x="2182" y="-126"/>
         </scene>
     </scenes>
 </document>

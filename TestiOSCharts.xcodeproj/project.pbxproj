@@ -132,6 +132,8 @@
 		3E1A85CB1CD8C9ED00ACA9F2 /* ChartUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A855A1CD8C9ED00ACA9F2 /* ChartUtils.swift */; };
 		3E1A85CC1CD8C9ED00ACA9F2 /* ChartViewPortHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A855B1CD8C9ED00ACA9F2 /* ChartViewPortHandler.swift */; };
 		3E1A85CF1CD8D6AB00ACA9F2 /* DoctorsForCancerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A85CE1CD8D6AB00ACA9F2 /* DoctorsForCancerViewController.swift */; };
+		3E29C6541CD987B0008189A5 /* NumberOfPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E29C6531CD987B0008189A5 /* NumberOfPatientViewController.swift */; };
+		3E29C65A1CD9D743008189A5 /* NumberOfPatientInOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E29C6591CD9D742008189A5 /* NumberOfPatientInOutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -285,6 +287,8 @@
 		3E1A855A1CD8C9ED00ACA9F2 /* ChartUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartUtils.swift; sourceTree = "<group>"; };
 		3E1A855B1CD8C9ED00ACA9F2 /* ChartViewPortHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewPortHandler.swift; sourceTree = "<group>"; };
 		3E1A85CE1CD8D6AB00ACA9F2 /* DoctorsForCancerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorsForCancerViewController.swift; sourceTree = "<group>"; };
+		3E29C6531CD987B0008189A5 /* NumberOfPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberOfPatientViewController.swift; sourceTree = "<group>"; };
+		3E29C6591CD9D742008189A5 /* NumberOfPatientInOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberOfPatientInOutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -429,6 +433,8 @@
 				3E1A802B1CD8C12200ACA9F2 /* Main.storyboard */,
 				3E1A80181CD8BFBE00ACA9F2 /* ViewController */,
 				3E1A80161CD8BFBE00ACA9F2 /* AgeOfPatient */,
+				3E29C6521CD98792008189A5 /* NumberOfPatient */,
+				3E29C6581CD9D71B008189A5 /* NumberOfPatientInOut */,
 				3E1A85CD1CD8D68B00ACA9F2 /* DoctorsForCancer */,
 			);
 			path = Controller;
@@ -739,6 +745,22 @@
 			path = DoctorsForCancer;
 			sourceTree = "<group>";
 		};
+		3E29C6521CD98792008189A5 /* NumberOfPatient */ = {
+			isa = PBXGroup;
+			children = (
+				3E29C6531CD987B0008189A5 /* NumberOfPatientViewController.swift */,
+			);
+			path = NumberOfPatient;
+			sourceTree = "<group>";
+		};
+		3E29C6581CD9D71B008189A5 /* NumberOfPatientInOut */ = {
+			isa = PBXGroup;
+			children = (
+				3E29C6591CD9D742008189A5 /* NumberOfPatientInOutViewController.swift */,
+			);
+			path = NumberOfPatientInOut;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -900,9 +922,11 @@
 				3E1A85991CD8C9ED00ACA9F2 /* ChartDefaultXAxisValueFormatter.swift in Sources */,
 				3E1A85B21CD8C9ED00ACA9F2 /* ChartAxisRendererBase.swift in Sources */,
 				3E1A85C11CD8C9ED00ACA9F2 /* LineScatterCandleRadarChartRenderer.swift in Sources */,
+				3E29C6541CD987B0008189A5 /* NumberOfPatientViewController.swift in Sources */,
 				3E1A857C1CD8C9ED00ACA9F2 /* CandleChartDataSet.swift in Sources */,
 				3E1A85891CD8C9ED00ACA9F2 /* ScatterChartData.swift in Sources */,
 				3E1A859A1CD8C9ED00ACA9F2 /* ChartFillFormatter.swift in Sources */,
+				3E29C65A1CD9D743008189A5 /* NumberOfPatientInOutViewController.swift in Sources */,
 				3E1A857B1CD8C9ED00ACA9F2 /* CandleChartDataEntry.swift in Sources */,
 				3E1A85941CD8C9ED00ACA9F2 /* IRadarChartDataSet.swift in Sources */,
 				3E1A85671CD8C9ED00ACA9F2 /* PieRadarChartViewBase.swift in Sources */,
@@ -1208,6 +1232,7 @@
 				3E1A7FFE1CD8A46F00ACA9F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E1A7FFF1CD8A46F00ACA9F2 /* Build configuration list for PBXNativeTarget "TestiOSChartsTests" */ = {
 			isa = XCConfigurationList;
@@ -1216,6 +1241,7 @@
 				3E1A80011CD8A46F00ACA9F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E1A80021CD8A46F00ACA9F2 /* Build configuration list for PBXNativeTarget "TestiOSChartsUITests" */ = {
 			isa = XCConfigurationList;
@@ -1224,6 +1250,7 @@
 				3E1A80041CD8A46F00ACA9F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

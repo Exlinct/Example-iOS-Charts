@@ -31,7 +31,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func initializeiOSChart() {
         self.iOSCharts = [
             iOSChart(name: "Age of patient", detail: "Chart about age of patient", identifier: "AgeOfPatient"),
-            iOSChart(name: "Number of patient", detail: "Chart about number of patient",identifier: "NumberOfPatient"),
+            iOSChart(name: "Number of patient", detail: "Chart about number of patients by area",identifier: "NumberOfPatient"),
             iOSChart(name: "Number of in/out patient", detail: "Chart about number of patient in/out of area",identifier: "NumberOfInOutPatient"),
             iOSChart(name: "Doctors for cancer", detail: "Ratio of seeing doctors for cancer",identifier: "DoctorsForCancer")
                          ]
@@ -68,6 +68,14 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         if iosChart.identifier == "AgeOfPatient" {
             let ageOfPatientVC:AgeOfPatientViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ageOfPatientVC") as! AgeOfPatientViewController
             self.navigationController!.pushViewController(ageOfPatientVC, animated: true)
+        }
+        else if iosChart.identifier == "NumberOfInOutPatient" {
+            let numberOfPatientInOutVC:NumberOfPatientInOutViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("numberOfPatientInOut") as! NumberOfPatientInOutViewController
+            self.navigationController!.pushViewController(numberOfPatientInOutVC, animated: true)
+        }
+        else if iosChart.identifier == "NumberOfPatient" {
+            let numberOfPatientVC:NumberOfPatientViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("numberOfPatient") as! NumberOfPatientViewController
+            self.navigationController!.pushViewController(numberOfPatientVC, animated: true)
         }
         else if iosChart.identifier == "DoctorsForCancer" {
             let doctorsForCancerVC:DoctorsForCancerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("doctorsForCancer") as! DoctorsForCancerViewController
