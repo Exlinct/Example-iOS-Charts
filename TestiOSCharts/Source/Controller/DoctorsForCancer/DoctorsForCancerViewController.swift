@@ -138,6 +138,7 @@ class DoctorsForCancerViewController: UIViewController,ChartViewDelegate {
         dataSet5.setColor(UIColor(red: 151/255, green: 174/255, blue: 195/255, alpha: 1.0))
         dataSet5.drawValuesEnabled = false
         dataSet5._maxSize = 40000
+        dataSet5._xMax = 10
         
         bubbleChartView.data = BubbleChartData(xVals: xVals, dataSets: [dataSet1,dataSet2,dataSet3,dataSet4,dataSet5])
     }

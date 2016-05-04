@@ -81,12 +81,18 @@ class NumberOfPatientViewController: UIViewController,ChartViewDelegate {
         leftAxis.gridLineDashLengths = [2.0]
         leftAxis._customAxisMin = true
         leftAxis._axisMinimum = 0.0
+        
         /// draw vertical enbale,width and color
         leftAxis.drawAxisLineEnabled = true
         leftAxis.axisLineWidth = 5.0
         leftAxis.axisLineColor = UIColor(red: 191/255, green: 203/255, blue: 220/255, alpha: 1.0)
+        
         /// draw value on vertical
         leftAxis.drawLabelsEnabled = true
+        
+        // set left axis max
+        leftAxis._customAxisMax = true
+        leftAxis._axisMaximum = 350
     }
     
     // MARK: - Setup Data

@@ -73,6 +73,10 @@ class AgeOfPatientViewController: UIViewController,ChartViewDelegate {
         // draw label on horizontal
         xAxis.drawLabelsEnabled = true
         
+//        // set xAxis maximum value
+//        xAxis._customAxisMax = true
+//        xAxis._axisMaximum = 350
+        
         let leftAxis: ChartYAxis = barChartView.leftAxis
         leftAxis.labelFont = UIFont.systemFontOfSize(10)
         leftAxis.labelCount = 8
@@ -97,6 +101,10 @@ class AgeOfPatientViewController: UIViewController,ChartViewDelegate {
         
         /// draw value on vertical
         leftAxis.drawLabelsEnabled = true
+        
+        // set leftAxis maximum value
+        leftAxis._customAxisMax = true
+        leftAxis._axisMaximum = 500
     }
     
     // MARK: - Setup Data
