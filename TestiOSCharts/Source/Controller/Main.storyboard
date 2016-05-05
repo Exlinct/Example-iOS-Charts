@@ -194,6 +194,72 @@
             </objects>
             <point key="canvasLocation" x="2182" y="2105"/>
         </scene>
+        <!--Comapre Nationals View Controller-->
+        <scene sceneID="Jpg-Sy-Pdc">
+            <objects>
+                <viewController storyboardIdentifier="comapareNationalsVC" id="x5h-ae-atp" customClass="ComapreNationalsViewController" customModule="TestiOSCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ax2-Dj-bPP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ldx-m7-cOG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zbD-lK-Hgn">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Po-6C-leF" customClass="BubbleChartView" customModule="TestiOSCharts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="768" height="954"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Po-6C-leF" firstAttribute="leading" secondItem="zbD-lK-Hgn" secondAttribute="leading" id="11E-c7-8kO"/>
+                            <constraint firstAttribute="trailing" secondItem="3Po-6C-leF" secondAttribute="trailing" id="ahM-31-LYQ"/>
+                            <constraint firstItem="Ldx-m7-cOG" firstAttribute="top" secondItem="3Po-6C-leF" secondAttribute="bottom" constant="50" id="stW-pw-V8A"/>
+                            <constraint firstItem="3Po-6C-leF" firstAttribute="top" secondItem="Ax2-Dj-bPP" secondAttribute="bottom" id="svN-gs-vdi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bubbleChartView" destination="3Po-6C-leF" id="MrL-KQ-HJX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MhB-yx-5WL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="-126"/>
+        </scene>
+        <!--Management Indicator View Controller-->
+        <scene sceneID="bAb-Ec-igO">
+            <objects>
+                <viewController storyboardIdentifier="managementIndicatorVC" id="rrz-6B-y3M" customClass="ManagementIndicatorViewController" customModule="TestiOSCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="enh-xc-UKL"/>
+                        <viewControllerLayoutGuide type="bottom" id="piF-zV-Klz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aDh-rF-JuB">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVG-1d-Hia" customClass="ScatterChartView" customModule="TestiOSCharts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="768" height="954"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="piF-zV-Klz" firstAttribute="top" secondItem="hVG-1d-Hia" secondAttribute="bottom" constant="50" id="AKB-za-tO6"/>
+                            <constraint firstItem="hVG-1d-Hia" firstAttribute="leading" secondItem="aDh-rF-JuB" secondAttribute="leading" id="Ymv-gT-Nsl"/>
+                            <constraint firstItem="hVG-1d-Hia" firstAttribute="top" secondItem="enh-xc-UKL" secondAttribute="bottom" id="bVs-Xs-eWq"/>
+                            <constraint firstAttribute="trailing" secondItem="hVG-1d-Hia" secondAttribute="trailing" id="cLQ-fu-s3c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scatterChartView" destination="hVG-1d-Hia" id="GmX-bv-PGu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCx-rP-HWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1371" y="-126"/>
+        </scene>
         <!--Doctors For Cancer View Controller-->
         <scene sceneID="MJj-uj-TL3">
             <objects>

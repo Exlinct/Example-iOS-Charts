@@ -33,7 +33,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             iOSChart(name: "Age of patient", detail: "Chart about age of patient", identifier: "AgeOfPatient"),
             iOSChart(name: "Number of patient", detail: "Chart about number of patients by area",identifier: "NumberOfPatient"),
             iOSChart(name: "Number of in/out patient", detail: "Chart about number of patient in/out of area",identifier: "NumberOfInOutPatient"),
-            iOSChart(name: "Doctors for cancer", detail: "Ratio of seeing doctors for cancer",identifier: "DoctorsForCancer")
+            iOSChart(name: "Doctors for cancer", detail: "Ratio of seeing doctors for cancer",identifier: "DoctorsForCancer"),
+            iOSChart(name: "Management indicator", detail: "Chart about management indicator", identifier: "ManagementIndicator"),
+            iOSChart(name: "Compare Nationals ALOS", detail: "Chart about compare nationals ALOS", identifier: "CompareNationals")
                          ]
         self.tableView .reloadData()
     }
@@ -80,6 +82,14 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         else if iosChart.identifier == "DoctorsForCancer" {
             let doctorsForCancerVC:DoctorsForCancerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("doctorsForCancer") as! DoctorsForCancerViewController
             self.navigationController!.pushViewController(doctorsForCancerVC, animated: true)
+        }
+        else if iosChart.identifier == "ManagementIndicator" {
+            let managementIndicatorVC:ManagementIndicatorViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("managementIndicatorVC") as! ManagementIndicatorViewController
+            self.navigationController!.pushViewController(managementIndicatorVC, animated: true)
+        }
+        else if iosChart.identifier == "CompareNationals" {
+            let compareNationalsVC:ComapreNationalsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("comapareNationalsVC") as! ComapreNationalsViewController
+            self.navigationController!.pushViewController(compareNationalsVC, animated: true)
         }
     }
     

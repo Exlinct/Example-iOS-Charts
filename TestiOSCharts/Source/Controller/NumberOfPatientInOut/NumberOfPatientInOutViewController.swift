@@ -32,12 +32,14 @@ class NumberOfPatientInOutViewController: UIViewController,ChartViewDelegate {
         barChartView.drawBarShadowEnabled = false
         barChartView.drawValueAboveBarEnabled = false
         
-        barChartView.maxVisibleValueCount = 10
+        barChartView.maxVisibleValueCount = 5
         barChartView.pinchZoomEnabled = false
         barChartView.doubleTapToZoomEnabled = false
         barChartView.drawGridBackgroundEnabled = true
         
         barChartView.scaleYEnabled = false
+        barChartView.scaleXEnabled = true
+
         barChartView.setVisibleXRangeMaximum(0.18)
         
         // disable right axis
@@ -54,8 +56,6 @@ class NumberOfPatientInOutViewController: UIViewController,ChartViewDelegate {
         barChartView.highlightPerTapEnabled = true
         barChartView.drawMarkers = false
         barChartView.animate(xAxisDuration: 3.0, yAxisDuration: 3.0)
-        
-        barChartView.scaleYEnabled = true
         
         let xAxis: ChartXAxis = barChartView.xAxis;
         xAxis.labelFont = UIFont(name: "HelveticaNeue-Light", size: 10.0)!
