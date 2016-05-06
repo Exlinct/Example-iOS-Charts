@@ -15,7 +15,6 @@
 		3E1A80261CD8BFBE00ACA9F2 /* AgeOfPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A80171CD8BFBE00ACA9F2 /* AgeOfPatientViewController.swift */; };
 		3E1A80271CD8BFBE00ACA9F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A80191CD8BFBE00ACA9F2 /* ViewController.swift */; };
 		3E1A80281CD8BFBE00ACA9F2 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A801C1CD8BFBE00ACA9F2 /* Global.m */; };
-		3E1A80291CD8BFBE00ACA9F2 /* Lib.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A801F1CD8BFBE00ACA9F2 /* Lib.m */; };
 		3E1A802A1CD8BFBE00ACA9F2 /* CustomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A80241CD8BFBE00ACA9F2 /* CustomeTableCell.swift */; };
 		3E1A802C1CD8C12200ACA9F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A802B1CD8C12200ACA9F2 /* Main.storyboard */; };
 		3E1A855C1CD8C9ED00ACA9F2 /* ChartAnimationEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A84DE1CD8C9ED00ACA9F2 /* ChartAnimationEasing.swift */; };
@@ -171,8 +170,6 @@
 		3E1A80191CD8BFBE00ACA9F2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3E1A801B1CD8BFBE00ACA9F2 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		3E1A801C1CD8BFBE00ACA9F2 /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
-		3E1A801E1CD8BFBE00ACA9F2 /* Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
-		3E1A801F1CD8BFBE00ACA9F2 /* Lib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lib.m; sourceTree = "<group>"; };
 		3E1A80241CD8BFBE00ACA9F2 /* CustomeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeTableCell.swift; sourceTree = "<group>"; };
 		3E1A802B1CD8C12200ACA9F2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3E1A84DE1CD8C9ED00ACA9F2 /* ChartAnimationEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartAnimationEasing.swift; sourceTree = "<group>"; };
@@ -474,8 +471,6 @@
 		3E1A801D1CD8BFBE00ACA9F2 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				3E1A801E1CD8BFBE00ACA9F2 /* Lib.h */,
-				3E1A801F1CD8BFBE00ACA9F2 /* Lib.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -968,7 +963,6 @@
 				3E1A85741CD8C9ED00ACA9F2 /* BarChartDataSet.swift in Sources */,
 				3E1A859D1CD8C9ED00ACA9F2 /* ChartHighlight.swift in Sources */,
 				3E1A85AD1CD8C9ED00ACA9F2 /* MoveChartViewJob.swift in Sources */,
-				3E1A80291CD8BFBE00ACA9F2 /* Lib.m in Sources */,
 				3E1A85631CD8C9ED00ACA9F2 /* CombinedChartView.swift in Sources */,
 				3E1A855D1CD8C9ED00ACA9F2 /* ChartAnimator.swift in Sources */,
 				3E1A85791CD8C9ED00ACA9F2 /* BubbleChartDataSet.swift in Sources */,
