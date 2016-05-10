@@ -8,9 +8,15 @@
 
 import UIKit
 
-class NumberOfPatientViewController: UIViewController,ChartViewDelegate {
+class NumberOfPatientViewController: UIViewController,ChartViewDelegate,UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet weak var barChartView: BarChartView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var arrYears:[String] = ["2011","2012","2013","2014","2015"]
+    var arrChartData:[BarChartData] = []
+    var barChartDataSet:[BarChartDataSet] = []
+    let identifier:String = "Cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +24,15 @@ class NumberOfPatientViewController: UIViewController,ChartViewDelegate {
         // Do any additional setup after loading the view.
         
         barChartViewSetup()
-        barChartViewData()
+        makeDataSameple()
+        ConfigTableView()
+    }
+    
+    // MARK: - Config TableView
+    
+    func ConfigTableView() {
+        self.tableView.layer.borderWidth = 1.0
+        self.tableView.layer.borderColor = UIColor.blackColor().CGColor
     }
 
     // MARK: - Setup Barchart View
@@ -42,7 +56,7 @@ class NumberOfPatientViewController: UIViewController,ChartViewDelegate {
         // disable right axis
         barChartView.rightAxis.enabled = false
         // config legend view show dataSet
-        barChartView.legend.position = ChartLegend.Position.RightOfChart
+        barChartView.legend.verticalAlignment = ChartLegend.VerticalAlignment.Bottom
         barChartView.legend.form = ChartLegend.Form.Square
         barChartView.legend.formSize = 9.0
         barChartView.legend.font = UIFont.systemFontOfSize(11)
@@ -95,78 +109,56 @@ class NumberOfPatientViewController: UIViewController,ChartViewDelegate {
         leftAxis._axisMaximum = 350
     }
     
-    // MARK: - Setup Data
+    // MARK: - Make Data Sample
     
-    func barChartViewData(){
-        var xVals = [String]()
-        var values = [[Double]]()
-        var yVals1 = [BarChartDataEntry]()
-        var yVals2 = [BarChartDataEntry]()
-        var yVals3 = [BarChartDataEntry]()
-        var yVals4 = [BarChartDataEntry]()
-        var yVals5 = [BarChartDataEntry]()
-        var yVals6 = [BarChartDataEntry]()
-        var yVals7 = [BarChartDataEntry]()
-        
-        values = [
-            [0,0,0,0,0,0,0],
-            [0,0,0,-1.6,47.6,-1.2,9.9],
-            [0,0,0,-4.4,87,5.2,19.4],
-            [0,0,0,-6.6,102.3,38.3,28.5],
-            [0,0,0,-7.4,87.1,87.5,41.9],
-            [0,0,0,-7.4,42.9,187.4,43.2],
-            [0,0,0,-7.4,-2.5,269.8,45]
-                ]
-        
+    func makeDataSameple() {
+        barChartDataSet.removeAll()
         let iYear = 2010
+        let labels = ["00～04才","05～14才","15～19才","20～39才","40～59才","60～79才","80才以上"]
+        var xVals:[String] = []
         
         for i in 0...6 {
-            xVals.append("\(5*i+iYear)")
-            let value = values[i]
+            xVals.append("\(iYear + i * 5)")
+            var yVals:[BarChartDataEntry] = []
             
-            yVals1.append(BarChartDataEntry(value: value[0], xIndex: i))
-            yVals2.append(BarChartDataEntry(value: value[1], xIndex: i))
-            yVals3.append(BarChartDataEntry(value: value[2], xIndex: i))
-            yVals4.append(BarChartDataEntry(value: value[3], xIndex: i))
-            yVals5.append(BarChartDataEntry(value: value[4], xIndex: i))
-            yVals6.append(BarChartDataEntry(value: value[5], xIndex: i))
-            yVals7.append(BarChartDataEntry(value: value[6], xIndex: i))
+            for j in 0...6 {
+                let val = Double.random(-10, upper: 300)
+                let yVal:BarChartDataEntry = BarChartDataEntry(value: val, xIndex: j)
+                yVals.append(yVal)
+            }
+            
+            let dataSet:BarChartDataSet = BarChartDataSet(yVals: yVals, label: labels[i])
+            dataSet.setColor(UIColor(red: Int.random(0, max: 255), green: Int.random(0, max: 255), blue: Int.random(0, max: 255)))
+            dataSet.drawValuesEnabled = false
+            barChartDataSet.append(dataSet)
         }
-        
-        let dataSet1:BarChartDataSet = BarChartDataSet(yVals: yVals1, label: "00～04才")
-        dataSet1 .setColor(UIColor(red: 217/255, green: 169/255, blue: 83/255, alpha: 1.0))
-        dataSet1.drawValuesEnabled = false;
-        
-        let dataSet2:BarChartDataSet = BarChartDataSet(yVals: yVals2, label: "05～14才")
-        dataSet2.setColor(UIColor(red: 194/255, green: 207/255, blue: 134/255, alpha: 1.0))
-        dataSet2.drawValuesEnabled = false
-        
-        let dataSet3:BarChartDataSet = BarChartDataSet(yVals: yVals3, label: "15～19才")
-        dataSet3.setColor(UIColor(red: 215/255, green: 217/255, blue: 187/255, alpha: 1.0))
-        dataSet3.drawValuesEnabled = false
-        
-        let dataSet4:BarChartDataSet = BarChartDataSet(yVals: yVals4, label: "20～39才")
-        dataSet4.setColor(UIColor(red: 125/255, green: 180/255, blue: 225/255, alpha: 1.0))
-        dataSet4.drawValuesEnabled = false
-        
-        let dataSet5:BarChartDataSet = BarChartDataSet(yVals: yVals5, label: "40～59才")
-        dataSet5.setColor(UIColor(red: 151/255, green: 174/255, blue: 195/255, alpha: 1.0))
-        dataSet5.drawValuesEnabled = false
-        
-        let dataSet6:BarChartDataSet = BarChartDataSet(yVals: yVals6, label: "60～79才")
-        dataSet6.setColor(UIColor(red: 201/255, green: 202/255, blue: 159/255, alpha: 1.0))
-        dataSet6.drawValuesEnabled = false
-        
-        let dataSet7:BarChartDataSet = BarChartDataSet(yVals: yVals7, label: "80才以上")
-        dataSet7.setColor(UIColor(red: 221/255, green: 95/255, blue: 147/255, alpha: 1.0))
-        dataSet7.drawValuesEnabled = false
-        
-        barChartView.data?.xValsObjc = xVals
-        
-        let barChartData = BarChartData(xVals: xVals, dataSets: [dataSet1,dataSet2,dataSet3,dataSet4,dataSet5,dataSet6,dataSet7])
+        let barChartData = BarChartData(xVals: xVals, dataSets: barChartDataSet)
         barChartData.groupSpace = 5.0
         barChartData .setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10.0))
         barChartView.data = barChartData
+    }
+    
+    // MARK: - UITableView DataSource
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.arrYears.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell:UITableViewCell! = tableView .dequeueReusableCellWithIdentifier(identifier)! as UITableViewCell
+        cell.textLabel?.text = arrYears[indexPath.row]
+        
+        return cell
+    }
+    
+    // MARK: - UITableView Delegate
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        makeDataSameple()
     }
     
     override func didReceiveMemoryWarning() {

@@ -35,7 +35,7 @@ class DoctorsForCancerViewController: UIViewController,ChartViewDelegate {
         bubbleChartView.rightAxis.enabled = false
         
         let chartLegend:ChartLegend = bubbleChartView.legend
-        chartLegend.position = ChartLegend.Position.RightOfChart
+        chartLegend.verticalAlignment = ChartLegend.VerticalAlignment.Bottom
         chartLegend.font = UIFont(name: "HelveticaNeue-Light", size: 10.0)!
         
         let xAxis: ChartXAxis = bubbleChartView.xAxis

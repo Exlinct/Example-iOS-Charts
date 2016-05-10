@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="OFp-sv-1Xa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="OFp-sv-1Xa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -41,7 +41,7 @@
                                         <rect key="frame" x="0.0" y="92" width="768" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aha-5F-IJK" id="TZM-C1-kz6">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ab8-i5-8Ay">
@@ -122,7 +122,7 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UOQ-2R-udA" id="5RS-YH-9JJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -166,20 +166,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRI-zz-E3C" customClass="BarChartView" customModule="TestiOSCharts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="768" height="954"/>
+                                <rect key="frame" x="0.0" y="20" width="768" height="804"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cvf-bc-aRm">
+                                <rect key="frame" x="513" y="839" width="240" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="E0O-1Q-WsO"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yHr-6Z-4Zz">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yHr-6Z-4Zz" id="uss-X3-TIG">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2XW-zc-iQ6" id="KjM-zd-BP2"/>
+                                    <outlet property="delegate" destination="2XW-zc-iQ6" id="53F-Sf-HHl"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="H1B-dv-gxH" firstAttribute="top" secondItem="lRI-zz-E3C" secondAttribute="bottom" constant="50" id="1F1-j3-Pzk"/>
+                            <constraint firstItem="H1B-dv-gxH" firstAttribute="top" secondItem="lRI-zz-E3C" secondAttribute="bottom" constant="200" id="1F1-j3-Pzk"/>
+                            <constraint firstItem="H1B-dv-gxH" firstAttribute="top" secondItem="Cvf-bc-aRm" secondAttribute="bottom" constant="15" id="BlX-14-CBv"/>
+                            <constraint firstAttribute="trailing" secondItem="Cvf-bc-aRm" secondAttribute="trailing" constant="15" id="H1b-r8-X7C"/>
                             <constraint firstItem="lRI-zz-E3C" firstAttribute="top" secondItem="uJN-c1-Dpf" secondAttribute="bottom" id="HLp-gw-qrP"/>
                             <constraint firstItem="lRI-zz-E3C" firstAttribute="leading" secondItem="hZd-20-NAx" secondAttribute="leading" id="UZQ-wQ-03n"/>
                             <constraint firstAttribute="trailing" secondItem="lRI-zz-E3C" secondAttribute="trailing" id="hr8-oh-vxM"/>
+                            <constraint firstItem="Cvf-bc-aRm" firstAttribute="top" secondItem="lRI-zz-E3C" secondAttribute="bottom" constant="15" id="vBD-I7-D3r"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="barChartView" destination="lRI-zz-E3C" id="0iX-Th-iHt"/>
+                        <outlet property="tableView" destination="Cvf-bc-aRm" id="jH6-KM-zLZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8b-o4-3v6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -199,20 +224,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaB-T1-20E" customClass="BarChartView" customModule="TestiOSCharts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="768" height="954"/>
+                                <rect key="frame" x="0.0" y="20" width="768" height="804"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YAB-iX-EMU">
+                                <rect key="frame" x="513" y="839" width="240" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="d0c-VS-Z9f"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Xaf-mL-hYC">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xaf-mL-hYC" id="Z2d-ZU-cWq">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cGc-zy-KbV" id="I9W-WY-F87"/>
+                                    <outlet property="delegate" destination="cGc-zy-KbV" id="yix-wS-KVK"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BaB-T1-20E" firstAttribute="top" secondItem="q3n-yw-n74" secondAttribute="bottom" id="5yh-x8-nf6"/>
                             <constraint firstAttribute="trailing" secondItem="BaB-T1-20E" secondAttribute="trailing" id="Qou-qU-BKR"/>
-                            <constraint firstItem="nxf-Il-xkT" firstAttribute="top" secondItem="BaB-T1-20E" secondAttribute="bottom" constant="50" id="ZlN-OE-xAG"/>
+                            <constraint firstAttribute="trailing" secondItem="YAB-iX-EMU" secondAttribute="trailing" constant="15" id="Vp4-R4-MbS"/>
+                            <constraint firstItem="nxf-Il-xkT" firstAttribute="top" secondItem="BaB-T1-20E" secondAttribute="bottom" constant="200" id="ZlN-OE-xAG"/>
+                            <constraint firstItem="nxf-Il-xkT" firstAttribute="top" secondItem="YAB-iX-EMU" secondAttribute="bottom" constant="15" id="aDN-kF-jCW"/>
                             <constraint firstItem="BaB-T1-20E" firstAttribute="leading" secondItem="0Q0-m4-dPm" secondAttribute="leading" id="u1I-74-ddY"/>
+                            <constraint firstItem="YAB-iX-EMU" firstAttribute="top" secondItem="BaB-T1-20E" secondAttribute="bottom" constant="15" id="ylc-Zm-B2q"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="barChartView" destination="BaB-T1-20E" id="0Zy-Qm-LQa"/>
+                        <outlet property="tableView" destination="YAB-iX-EMU" id="pbv-IW-3oo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chm-um-p0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -232,20 +282,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Po-6C-leF" customClass="BubbleChartView" customModule="TestiOSCharts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="768" height="954"/>
+                                <rect key="frame" x="0.0" y="20" width="768" height="804"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ele-HX-Psc">
+                                <rect key="frame" x="513" y="839" width="240" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="3bM-Zk-3wM"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="VpP-GD-mvg">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VpP-GD-mvg" id="wSM-iV-t3b">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="x5h-ae-atp" id="XPa-sZ-Pnd"/>
+                                    <outlet property="delegate" destination="x5h-ae-atp" id="hru-t7-bVJ"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3Po-6C-leF" firstAttribute="leading" secondItem="zbD-lK-Hgn" secondAttribute="leading" id="11E-c7-8kO"/>
+                            <constraint firstItem="Ele-HX-Psc" firstAttribute="top" secondItem="3Po-6C-leF" secondAttribute="bottom" constant="15" id="XSK-yy-YIX"/>
                             <constraint firstAttribute="trailing" secondItem="3Po-6C-leF" secondAttribute="trailing" id="ahM-31-LYQ"/>
-                            <constraint firstItem="Ldx-m7-cOG" firstAttribute="top" secondItem="3Po-6C-leF" secondAttribute="bottom" constant="50" id="stW-pw-V8A"/>
+                            <constraint firstItem="Ldx-m7-cOG" firstAttribute="top" secondItem="Ele-HX-Psc" secondAttribute="bottom" constant="15" id="dBG-YQ-ul3"/>
+                            <constraint firstAttribute="trailing" secondItem="Ele-HX-Psc" secondAttribute="trailing" constant="15" id="sMg-UR-AWo"/>
+                            <constraint firstItem="Ldx-m7-cOG" firstAttribute="top" secondItem="3Po-6C-leF" secondAttribute="bottom" constant="200" id="stW-pw-V8A"/>
                             <constraint firstItem="3Po-6C-leF" firstAttribute="top" secondItem="Ax2-Dj-bPP" secondAttribute="bottom" id="svN-gs-vdi"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bubbleChartView" destination="3Po-6C-leF" id="MrL-KQ-HJX"/>
+                        <outlet property="tableView" destination="Ele-HX-Psc" id="JYE-eZ-cDX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MhB-yx-5WL" userLabel="First Responder" sceneMemberID="firstResponder"/>
