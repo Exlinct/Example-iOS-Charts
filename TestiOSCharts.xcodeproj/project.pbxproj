@@ -23,8 +23,6 @@
 		DEBE17FB1CE1D845006A0E2B /* NumberOfPatientInOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE17F41CE1D845006A0E2B /* NumberOfPatientInOutViewController.swift */; };
 		DEBE17FC1CE1D845006A0E2B /* NumberOfPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE17F51CE1D845006A0E2B /* NumberOfPatientViewController.swift */; };
 		DEBE17FD1CE1D845006A0E2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE17F61CE1D845006A0E2B /* ViewController.swift */; };
-		DED066041CE31A5C00B72F85 /* BubbleChartXY.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED066031CE31A5C00B72F85 /* BubbleChartXY.swift */; };
-		DED066061CE31C8100B72F85 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED066051CE31C8100B72F85 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +67,6 @@
 		DEBE17F41CE1D845006A0E2B /* NumberOfPatientInOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberOfPatientInOutViewController.swift; sourceTree = "<group>"; };
 		DEBE17F51CE1D845006A0E2B /* NumberOfPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberOfPatientViewController.swift; sourceTree = "<group>"; };
 		DEBE17F61CE1D845006A0E2B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DED066031CE31A5C00B72F85 /* BubbleChartXY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleChartXY.swift; sourceTree = "<group>"; };
-		DED066051CE31C8100B72F85 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		E06DB3A32D35DCF45E739CBC /* Pods-TestiOSCharts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestiOSCharts.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestiOSCharts/Pods-TestiOSCharts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,7 +228,6 @@
 				DEBE17F41CE1D845006A0E2B /* NumberOfPatientInOutViewController.swift */,
 				DEBE17F51CE1D845006A0E2B /* NumberOfPatientViewController.swift */,
 				DEBE17F11CE1D845006A0E2B /* ComapreNationalsViewController.swift */,
-				DED066031CE31A5C00B72F85 /* BubbleChartXY.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,7 +244,6 @@
 		3E1A801D1CD8BFBE00ACA9F2 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				DED066051CE31C8100B72F85 /* File.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -476,14 +470,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEBE17FB1CE1D845006A0E2B /* NumberOfPatientInOutViewController.swift in Sources */,
-				DED066061CE31C8100B72F85 /* File.swift in Sources */,
 				DEBE17FA1CE1D845006A0E2B /* ManagementIndicatorViewController.swift in Sources */,
 				DEBE17FC1CE1D845006A0E2B /* NumberOfPatientViewController.swift in Sources */,
 				3E1A80281CD8BFBE00ACA9F2 /* Global.m in Sources */,
 				DEBE17F91CE1D845006A0E2B /* DoctorsForCancerViewController.swift in Sources */,
 				DEBE17F81CE1D845006A0E2B /* ComapreNationalsViewController.swift in Sources */,
 				DEBE17FD1CE1D845006A0E2B /* ViewController.swift in Sources */,
-				DED066041CE31A5C00B72F85 /* BubbleChartXY.swift in Sources */,
 				3E1A802A1CD8BFBE00ACA9F2 /* CustomeTableCell.swift in Sources */,
 				DEBE17F71CE1D845006A0E2B /* AgeOfPatientViewController.swift in Sources */,
 				3E1A80251CD8BFBE00ACA9F2 /* AppDelegate.swift in Sources */,
