@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class ComapreNationalsViewController: UIViewController,ChartViewDelegate,UITableViewDataSource,UITableViewDelegate {
 
@@ -49,11 +50,11 @@ class ComapreNationalsViewController: UIViewController,ChartViewDelegate,UITable
         
         // set chart legend
         let chartLegend:ChartLegend = bubbleChartView.legend
-        chartLegend.verticalAlignment = ChartLegend.VerticalAlignment.Bottom
+        chartLegend.position = ChartLegend.ChartLegendPosition.BelowChartLeft
         chartLegend.font = UIFont(name: "HelveticaNeue-Light", size: 10.0)!
         
         let xAxis: ChartXAxis = bubbleChartView.xAxis
-        xAxis.labelPosition = ChartXAxis.LabelPosition.Bottom
+        xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Bottom
         xAxis.labelFont = UIFont.systemFontOfSize(10)
         xAxis.labelTextColor = UIColor.blackColor()
         xAxis.drawGridLinesEnabled = false
@@ -84,11 +85,11 @@ class ComapreNationalsViewController: UIViewController,ChartViewDelegate,UITable
         leftAxis.drawLabelsEnabled = true
         
         //set max value left axis
-        leftAxis._customAxisMax = true
+//        leftAxis._customAxisMax = true
         leftAxis._axisMaximum = 8
         
         // set min value left axis
-        leftAxis._customAxisMin = true
+//        leftAxis._customAxisMin = true
         leftAxis._axisMinimum = -8
         
         xAxis.axisRange = 2.0
@@ -117,7 +118,7 @@ class ComapreNationalsViewController: UIViewController,ChartViewDelegate,UITable
             let dataSet:BubbleChartDataSet = BubbleChartDataSet(yVals: yVals, label: labels[i])
             dataSet.setColor(UIColor(red: Int.random(0, max: 255), green: Int.random(0, max: 255), blue: Int.random(0, max: 255)))
             dataSet.drawValuesEnabled = false
-            dataSet._maxSize = 30000
+//            dataSet._maxSize = 30000
             chartDataSet.append(dataSet)
         }
         

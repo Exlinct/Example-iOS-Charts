@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import Charts
 
 class ManagementIndicatorViewController: UIViewController,ChartViewDelegate {
 
@@ -33,8 +34,8 @@ class ManagementIndicatorViewController: UIViewController,ChartViewDelegate {
         scatterChartView.pinchZoomEnabled = false
         scatterChartView.doubleTapToZoomEnabled = false
         scatterChartView.rightAxis.enabled = false
-        scatterChartView.legend.position = ChartLegend.Position.RightOfChart
-        scatterChartView.legend.form = ChartLegend.Form.Square
+        scatterChartView.legend.position = ChartLegend.ChartLegendPosition.RightOfChart
+        scatterChartView.legend.form = ChartLegend.ChartLegendForm.Square
         scatterChartView.legend.formSize = 9.0
         scatterChartView.legend.font = UIFont.systemFontOfSize(11)
         scatterChartView.legend.xEntrySpace = 5.0
@@ -42,7 +43,7 @@ class ManagementIndicatorViewController: UIViewController,ChartViewDelegate {
         scatterChartView.animate(xAxisDuration: 3.0, yAxisDuration: 3.0)
         
         let xAxis: ChartXAxis = scatterChartView.xAxis
-        xAxis.labelPosition = ChartXAxis.LabelPosition.Bottom
+        xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Bottom
         xAxis.labelFont = UIFont.systemFontOfSize(10)
         xAxis.labelTextColor = UIColor.blackColor()
         xAxis.drawGridLinesEnabled = false
@@ -65,13 +66,13 @@ class ManagementIndicatorViewController: UIViewController,ChartViewDelegate {
         leftAxis.valueFormatter?.maximumFractionDigits = 0;
         leftAxis.valueFormatter?.negativeSuffix = ""
         leftAxis.valueFormatter?.positiveSuffix = ""
-        leftAxis.labelPosition = ChartYAxis.LabelPosition.OutsideChart
+        leftAxis.labelPosition = ChartYAxis.YAxisLabelPosition.OutsideChart
         leftAxis.spaceTop = 0.0
         leftAxis.drawLabelsEnabled = true
         leftAxis.drawLimitLinesBehindDataEnabled = true
         leftAxis.drawGridLinesEnabled = false
         leftAxis.gridLineDashLengths = [2.0]
-        leftAxis._customAxisMin = true
+//        leftAxis._customAxisMin = true
         leftAxis._axisMinimum = 0.0
         
         /// draw vertical enbale,width and color
@@ -83,8 +84,9 @@ class ManagementIndicatorViewController: UIViewController,ChartViewDelegate {
         leftAxis.drawLabelsEnabled = true
         
         // set leftAxis maximum value
-        leftAxis._customAxisMax = true
-        leftAxis._axisMaximum = 50.0
+//        leftAxis._customAxisMax = true
+        leftAxis.axisMaxValue = 50.0
+        leftAxis.axisMinValue = 0.0
     }
     
     // MARK: - ChartView Data
@@ -116,19 +118,19 @@ class ManagementIndicatorViewController: UIViewController,ChartViewDelegate {
         xVals.append(value4[0] as! String)
         
         let dataSet1:ScatterChartDataSet = ScatterChartDataSet(yVals:[entry1], label: value1[0] as? String)
-        dataSet1.scatterShape = ScatterChartDataSet.Shape.Circle
+        dataSet1.scatterShape = ScatterChartDataSet.ScatterShape.Circle
         dataSet1.setColor(ChartColorTemplates.colorful()[0])
         
         let dataSet2:ScatterChartDataSet = ScatterChartDataSet(yVals: [entry2], label: value2[0] as? String)
-        dataSet2.scatterShape = ScatterChartDataSet.Shape.Cross
+        dataSet2.scatterShape = ScatterChartDataSet.ScatterShape.Cross
         dataSet2.setColor(ChartColorTemplates.colorful()[1])
         
         let dataSet3:ScatterChartDataSet = ScatterChartDataSet(yVals: [entry3], label: value3[0] as? String)
-        dataSet3.scatterShape = ScatterChartDataSet.Shape.Square
+        dataSet3.scatterShape = ScatterChartDataSet.ScatterShape.Square
         dataSet3.setColor(ChartColorTemplates.colorful()[2])
         
         let dataSet4:ScatterChartDataSet = ScatterChartDataSet(yVals: [entry4], label: value4[0] as? String)
-        dataSet4.scatterShape = ScatterChartDataSet.Shape.Triangle
+        dataSet4.scatterShape = ScatterChartDataSet.ScatterShape.Triangle
         dataSet4.setColor(ChartColorTemplates.colorful()[3])
         
         let scatterChartData:ScatterChartData = ScatterChartData(xVals: xVals, dataSets: [dataSet1,dataSet2,dataSet3,dataSet4])

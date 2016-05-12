@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class NumberOfPatientInOutViewController: UIViewController,ChartViewDelegate,UITableViewDataSource,UITableViewDelegate {
 
@@ -52,8 +53,8 @@ class NumberOfPatientInOutViewController: UIViewController,ChartViewDelegate,UIT
         barChartView.rightAxis.enabled = false
         
         // config legend view show dataSet
-        barChartView.legend.verticalAlignment = ChartLegend.VerticalAlignment.Bottom
-        barChartView.legend.form = ChartLegend.Form.Square
+        barChartView.legend.position = ChartLegend.ChartLegendPosition.BelowChartLeft
+        barChartView.legend.form = ChartLegend.ChartLegendForm.Square
         barChartView.legend.formSize = 9.0
         barChartView.legend.font = UIFont.systemFontOfSize(11)
         barChartView.legend.xEntrySpace = 5.0
@@ -65,7 +66,7 @@ class NumberOfPatientInOutViewController: UIViewController,ChartViewDelegate,UIT
         
         let xAxis: ChartXAxis = barChartView.xAxis;
         xAxis.labelFont = UIFont(name: "HelveticaNeue-Light", size: 10.0)!
-        xAxis.labelPosition = ChartXAxis.LabelPosition.Bottom
+        xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Bottom
         xAxis.drawGridLinesEnabled = false
         
         // draw horizontal enbale width and color
@@ -84,7 +85,7 @@ class NumberOfPatientInOutViewController: UIViewController,ChartViewDelegate,UIT
         leftAxis.valueFormatter?.maximumFractionDigits = 0;
         leftAxis.valueFormatter?.negativeSuffix = ""
         leftAxis.valueFormatter?.positiveSuffix = ""
-        leftAxis.labelPosition = ChartYAxis.LabelPosition.OutsideChart
+        leftAxis.labelPosition = ChartYAxis.YAxisLabelPosition.OutsideChart
         leftAxis.spaceTop = 0.0
         leftAxis.drawLabelsEnabled = true
         leftAxis.drawLimitLinesBehindDataEnabled = true
@@ -92,11 +93,11 @@ class NumberOfPatientInOutViewController: UIViewController,ChartViewDelegate,UIT
         leftAxis.gridLineDashLengths = [2.0]
         
         // set min value for chart
-        leftAxis._customAxisMin = true
+//        leftAxis._customAxisMin = true
         leftAxis._axisMinimum = -500
         
         // set max value for chart
-        leftAxis._customAxisMax = true
+//        leftAxis._customAxisMax = true
         leftAxis._axisMaximum = 1500
         
         /// draw vertical enbale,width and color

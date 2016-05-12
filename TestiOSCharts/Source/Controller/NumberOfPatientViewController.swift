@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class NumberOfPatientViewController: UIViewController,ChartViewDelegate,UITableViewDataSource,UITableViewDelegate {
 
@@ -56,8 +57,8 @@ class NumberOfPatientViewController: UIViewController,ChartViewDelegate,UITableV
         // disable right axis
         barChartView.rightAxis.enabled = false
         // config legend view show dataSet
-        barChartView.legend.verticalAlignment = ChartLegend.VerticalAlignment.Bottom
-        barChartView.legend.form = ChartLegend.Form.Square
+        barChartView.legend.position = ChartLegend.ChartLegendPosition.BelowChartLeft
+        barChartView.legend.form = ChartLegend.ChartLegendForm.Square
         barChartView.legend.formSize = 9.0
         barChartView.legend.font = UIFont.systemFontOfSize(11)
         barChartView.legend.xEntrySpace = 5.0
@@ -70,7 +71,7 @@ class NumberOfPatientViewController: UIViewController,ChartViewDelegate,UITableV
         
         let xAxis: ChartXAxis = barChartView.xAxis;
         xAxis.labelFont = UIFont(name: "HelveticaNeue-Light", size: 10.0)!
-        xAxis.labelPosition = ChartXAxis.LabelPosition.Bottom
+        xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Bottom
         xAxis.drawGridLinesEnabled = false
         // draw horizontal enbale width and color
         xAxis.drawAxisLineEnabled = true
@@ -87,14 +88,13 @@ class NumberOfPatientViewController: UIViewController,ChartViewDelegate,UITableV
         leftAxis.valueFormatter?.maximumFractionDigits = 0;
         leftAxis.valueFormatter?.negativeSuffix = ""
         leftAxis.valueFormatter?.positiveSuffix = ""
-        leftAxis.labelPosition = ChartYAxis.LabelPosition.OutsideChart
+        leftAxis.labelPosition = ChartYAxis.YAxisLabelPosition.OutsideChart
         leftAxis.spaceTop = 0.0
         leftAxis.drawLabelsEnabled = true
         leftAxis.drawLimitLinesBehindDataEnabled = true
         leftAxis.drawGridLinesEnabled = false
         leftAxis.gridLineDashLengths = [2.0]
-        leftAxis._customAxisMin = true
-        leftAxis._axisMinimum = 0.0
+        leftAxis.axisMinValue = 0.0
         
         /// draw vertical enbale,width and color
         leftAxis.drawAxisLineEnabled = true
@@ -105,8 +105,7 @@ class NumberOfPatientViewController: UIViewController,ChartViewDelegate,UITableV
         leftAxis.drawLabelsEnabled = true
         
         // set left axis max
-        leftAxis._customAxisMax = true
-        leftAxis._axisMaximum = 350
+        leftAxis.axisMaxValue = 350
     }
     
     // MARK: - Make Data Sample

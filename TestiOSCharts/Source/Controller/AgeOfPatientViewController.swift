@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 public extension Int {
     /// Returns a random Int point number between 0 and Int.max.
@@ -185,8 +186,8 @@ class AgeOfPatientViewController: UIViewController,ChartViewDelegate,UITableView
         barChartView.rightAxis.enabled = false
         
         // config legend view show dataSet
-        barChartView.legend.horizontalAlignment = ChartLegend.HorizontalAlignment.Left
-        barChartView.legend.form = ChartLegend.Form.Square
+        barChartView.legend.position = ChartLegend.ChartLegendPosition.BelowChartLeft
+        barChartView.legend.form = ChartLegend.ChartLegendForm.Square
         barChartView.legend.formSize = 9.0
         barChartView.legend.font = UIFont.systemFontOfSize(11)
         barChartView.legend.xEntrySpace = 5.0
@@ -198,7 +199,7 @@ class AgeOfPatientViewController: UIViewController,ChartViewDelegate,UITableView
         barChartView.animate(xAxisDuration: 3.0, yAxisDuration: 3.0)
         
         let xAxis: ChartXAxis = barChartView.xAxis
-        xAxis.labelPosition = ChartXAxis.LabelPosition.Bottom
+        xAxis.labelPosition = ChartXAxis.XAxisLabelPosition.Bottom
         xAxis.labelFont = UIFont.systemFontOfSize(10)
         xAxis.labelTextColor = UIColor.blackColor()
         xAxis.drawGridLinesEnabled = false
@@ -214,8 +215,8 @@ class AgeOfPatientViewController: UIViewController,ChartViewDelegate,UITableView
         xAxis.drawLabelsEnabled = true
         
         // set xAxis maximum value
-        xAxis._customAxisMax = true
-        xAxis._axisMaximum = 200
+        xAxis.axisMaxValue = 200.0
+//        xAxis.axisMinValue = 0
         
         let leftAxis: ChartYAxis = barChartView.leftAxis
         leftAxis.labelFont = UIFont.systemFontOfSize(10)
@@ -225,14 +226,13 @@ class AgeOfPatientViewController: UIViewController,ChartViewDelegate,UITableView
         leftAxis.valueFormatter?.maximumFractionDigits = 0;
         leftAxis.valueFormatter?.negativeSuffix = ""
         leftAxis.valueFormatter?.positiveSuffix = ""
-        leftAxis.labelPosition = ChartYAxis.LabelPosition.OutsideChart
+        leftAxis.labelPosition = ChartYAxis.YAxisLabelPosition.OutsideChart
         leftAxis.spaceTop = 0.0
         leftAxis.drawLabelsEnabled = true
         leftAxis.drawLimitLinesBehindDataEnabled = true
         leftAxis.drawGridLinesEnabled = false
         leftAxis.gridLineDashLengths = [2.0]
-        leftAxis._customAxisMin = true
-        leftAxis._axisMinimum = 0.0
+        leftAxis.axisMaxValue = 0.0
         
         /// draw vertical enbale,width and color
         leftAxis.drawAxisLineEnabled = true
@@ -243,8 +243,8 @@ class AgeOfPatientViewController: UIViewController,ChartViewDelegate,UITableView
         leftAxis.drawLabelsEnabled = true
         
         // set leftAxis maximum value
-        leftAxis._customAxisMax = true
-        leftAxis._axisMaximum = 500
+        leftAxis.axisMaxValue = 500
+        leftAxis.axisMinValue = 0.0
     }
     
     // MARK: - Setup Data

@@ -35,7 +35,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             iOSChart(name: "Number of in/out patient", detail: "Chart about number of patient in/out of area",identifier: "NumberOfInOutPatient"),
             iOSChart(name: "Doctors for cancer", detail: "Ratio of seeing doctors for cancer",identifier: "DoctorsForCancer"),
             iOSChart(name: "Management indicator", detail: "Chart about management indicator", identifier: "ManagementIndicator"),
-            iOSChart(name: "Compare Nationals ALOS", detail: "Chart about compare nationals ALOS", identifier: "CompareNationals")
+            iOSChart(name: "Compare Nationals ALOS", detail: "Chart about compare nationals ALOS", identifier: "CompareNationals"),
+            iOSChart(name: "XY Chart Test", detail: "Test chart with x axis custome value", identifier: "XYChart")
                          ]
         self.tableView .reloadData()
     }
@@ -90,6 +91,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         else if iosChart.identifier == "CompareNationals" {
             let compareNationalsVC:ComapreNationalsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("comapareNationalsVC") as! ComapreNationalsViewController
             self.navigationController!.pushViewController(compareNationalsVC, animated: true)
+        }
+        else if iosChart.identifier == "XYChart" {
+            let xyChartVC:BubbleChartXY = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("bubbleChartXY") as! BubbleChartXY
+            self.navigationController?.pushViewController(xyChartVC, animated: true)
         }
     }
     

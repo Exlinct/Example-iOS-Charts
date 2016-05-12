@@ -107,7 +107,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pro-wC-f0z" customClass="BarChartView" customModule="TestiOSCharts" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pro-wC-f0z" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="20" width="768" height="804"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -165,7 +165,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRI-zz-E3C" customClass="BarChartView" customModule="TestiOSCharts" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRI-zz-E3C" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="20" width="768" height="804"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -223,7 +223,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaB-T1-20E" customClass="BarChartView" customModule="TestiOSCharts" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaB-T1-20E" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="20" width="768" height="804"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -269,6 +269,109 @@
             </objects>
             <point key="canvasLocation" x="2182" y="2105"/>
         </scene>
+        <!--Bubble ChartXY-->
+        <scene sceneID="oOW-l5-OuF">
+            <objects>
+                <viewController storyboardIdentifier="bubbleChartXY" id="CbD-qY-Te5" customClass="BubbleChartXY" customModule="TestiOSCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z3h-Qn-uno"/>
+                        <viewControllerLayoutGuide type="bottom" id="dF1-87-LGv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f2e-ce-MJo">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qr9-ZM-orS">
+                                <rect key="frame" x="513" y="839" width="240" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="HEk-c5-qmC"/>
+                                    <constraint firstAttribute="height" constant="170" id="bZq-7O-Ldq"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="U7L-GX-Hb9">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U7L-GX-Hb9" id="jSZ-hf-GpU">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CbD-qY-Te5" id="zcB-gE-KdQ"/>
+                                    <outlet property="delegate" destination="CbD-qY-Te5" id="oJY-EK-Dak"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dF1-87-LGv" firstAttribute="top" secondItem="Qr9-ZM-orS" secondAttribute="bottom" constant="15" id="dnr-jj-Fjt"/>
+                            <constraint firstAttribute="trailing" secondItem="Qr9-ZM-orS" secondAttribute="trailing" constant="15" id="fOX-hu-u1W"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J2k-2T-g2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-307" y="-1288"/>
+        </scene>
+        <!--Chart View Controller-->
+        <scene sceneID="7Qh-mo-D7w">
+            <objects>
+                <viewController storyboardIdentifier="xyChartVC" id="Zfl-R0-7zZ" customClass="XYChartViewController" customModule="TestiOSCharts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SXc-1a-xcu"/>
+                        <viewControllerLayoutGuide type="bottom" id="DAY-Mf-xwH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kaa-Mr-Uf6">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBm-fX-pRu">
+                                <rect key="frame" x="0.0" y="20" width="768" height="804"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ND9-zO-hNE">
+                                <rect key="frame" x="513" y="839" width="240" height="170"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="SiF-Bv-PfU"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="HsR-LH-Pk8">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HsR-LH-Pk8" id="lFI-Eb-Rf5">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="x5h-ae-atp" id="4d6-OU-igs"/>
+                                    <outlet property="delegate" destination="x5h-ae-atp" id="diB-qy-sXx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DAY-Mf-xwH" firstAttribute="top" secondItem="ND9-zO-hNE" secondAttribute="bottom" constant="15" id="GXO-K0-y4H"/>
+                            <constraint firstAttribute="trailing" secondItem="OBm-fX-pRu" secondAttribute="trailing" id="VTf-Ft-eov"/>
+                            <constraint firstItem="DAY-Mf-xwH" firstAttribute="top" secondItem="OBm-fX-pRu" secondAttribute="bottom" constant="200" id="cWS-1L-MBG"/>
+                            <constraint firstItem="OBm-fX-pRu" firstAttribute="leading" secondItem="Kaa-Mr-Uf6" secondAttribute="leading" id="dtB-ZQ-0ny"/>
+                            <constraint firstAttribute="trailing" secondItem="ND9-zO-hNE" secondAttribute="trailing" constant="15" id="fGV-pz-dRe"/>
+                            <constraint firstItem="ND9-zO-hNE" firstAttribute="top" secondItem="OBm-fX-pRu" secondAttribute="bottom" constant="15" id="zDv-Rb-43C"/>
+                            <constraint firstItem="OBm-fX-pRu" firstAttribute="top" secondItem="SXc-1a-xcu" secondAttribute="bottom" id="zyG-hP-yh6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="xyBubbleChartView" destination="OBm-fX-pRu" id="TB1-bf-Im4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tzs-gQ-wZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-307" y="-126"/>
+        </scene>
         <!--Comapre Nationals View Controller-->
         <scene sceneID="Jpg-Sy-Pdc">
             <objects>
@@ -281,7 +384,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Po-6C-leF" customClass="BubbleChartView" customModule="TestiOSCharts" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Po-6C-leF" customClass="BubbleChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="20" width="768" height="804"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -339,7 +442,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVG-1d-Hia" customClass="ScatterChartView" customModule="TestiOSCharts" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVG-1d-Hia" customClass="ScatterChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="20" width="768" height="954"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -372,7 +475,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSM-4S-Vvf" customClass="BubbleChartView" customModule="TestiOSCharts" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSM-4S-Vvf" customClass="BubbleChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="20" width="768" height="954"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
