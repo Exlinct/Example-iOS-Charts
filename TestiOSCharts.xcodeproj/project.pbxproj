@@ -23,6 +23,8 @@
 		DEBE17FB1CE1D845006A0E2B /* NumberOfPatientInOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE17F41CE1D845006A0E2B /* NumberOfPatientInOutViewController.swift */; };
 		DEBE17FC1CE1D845006A0E2B /* NumberOfPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE17F51CE1D845006A0E2B /* NumberOfPatientViewController.swift */; };
 		DEBE17FD1CE1D845006A0E2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE17F61CE1D845006A0E2B /* ViewController.swift */; };
+		DEBF82261CE43CD7009BB3CD /* BubbleChartXY.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF82251CE43CD7009BB3CD /* BubbleChartXY.swift */; };
+		DEBF82291CE43DC9009BB3CD /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF82281CE43DC9009BB3CD /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		DEBE17F41CE1D845006A0E2B /* NumberOfPatientInOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberOfPatientInOutViewController.swift; sourceTree = "<group>"; };
 		DEBE17F51CE1D845006A0E2B /* NumberOfPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberOfPatientViewController.swift; sourceTree = "<group>"; };
 		DEBE17F61CE1D845006A0E2B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DEBF82251CE43CD7009BB3CD /* BubbleChartXY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleChartXY.swift; sourceTree = "<group>"; };
+		DEBF82281CE43DC9009BB3CD /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E06DB3A32D35DCF45E739CBC /* Pods-TestiOSCharts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestiOSCharts.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestiOSCharts/Pods-TestiOSCharts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,10 +202,10 @@
 		3E1A80121CD8BFBE00ACA9F2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DEBF82271CE43DC9009BB3CD /* Helper */,
 				3E1A80131CD8BFBE00ACA9F2 /* AppDelegate */,
 				3E1A80151CD8BFBE00ACA9F2 /* Controller */,
 				3E1A801A1CD8BFBE00ACA9F2 /* Global */,
-				3E1A801D1CD8BFBE00ACA9F2 /* Helper */,
 				3E1A80201CD8BFBE00ACA9F2 /* Libs */,
 				3E1A80211CD8BFBE00ACA9F2 /* Model */,
 				3E1A80221CD8BFBE00ACA9F2 /* View */,
@@ -228,6 +232,7 @@
 				DEBE17F41CE1D845006A0E2B /* NumberOfPatientInOutViewController.swift */,
 				DEBE17F51CE1D845006A0E2B /* NumberOfPatientViewController.swift */,
 				DEBE17F11CE1D845006A0E2B /* ComapreNationalsViewController.swift */,
+				DEBF82251CE43CD7009BB3CD /* BubbleChartXY.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -239,13 +244,6 @@
 				3E1A801C1CD8BFBE00ACA9F2 /* Global.m */,
 			);
 			path = Global;
-			sourceTree = "<group>";
-		};
-		3E1A801D1CD8BFBE00ACA9F2 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		3E1A80201CD8BFBE00ACA9F2 /* Libs */ = {
@@ -285,6 +283,14 @@
 				E06DB3A32D35DCF45E739CBC /* Pods-TestiOSCharts.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DEBF82271CE43DC9009BB3CD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF82281CE43DC9009BB3CD /* Helper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,9 +482,11 @@
 				DEBE17F91CE1D845006A0E2B /* DoctorsForCancerViewController.swift in Sources */,
 				DEBE17F81CE1D845006A0E2B /* ComapreNationalsViewController.swift in Sources */,
 				DEBE17FD1CE1D845006A0E2B /* ViewController.swift in Sources */,
+				DEBF82261CE43CD7009BB3CD /* BubbleChartXY.swift in Sources */,
 				3E1A802A1CD8BFBE00ACA9F2 /* CustomeTableCell.swift in Sources */,
 				DEBE17F71CE1D845006A0E2B /* AgeOfPatientViewController.swift in Sources */,
 				3E1A80251CD8BFBE00ACA9F2 /* AppDelegate.swift in Sources */,
+				DEBF82291CE43DC9009BB3CD /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
